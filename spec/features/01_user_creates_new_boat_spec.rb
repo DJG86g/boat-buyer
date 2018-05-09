@@ -1,4 +1,5 @@
 require "rails_helper"
+feature "user can add boats" do
   scenario "user creates new boat successfully" do
     visit new_boat_path
     expect(page).to have_content "New Boat Form"
@@ -17,7 +18,6 @@ require "rails_helper"
     visit new_boat_path
     expect(page).to have_content "New Boat Form"
     click_button "Add My Boat"
-    save_and_open_page
     expect(page).to have_content "Brand can't be blank"
     expect(page).to have_content "Model can't be blank"
     expect(page).to have_content "Year can't be blank"
