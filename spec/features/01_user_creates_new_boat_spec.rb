@@ -1,8 +1,8 @@
-require "rails_helper"
-feature "user can add boats" do
-  scenario "user creates new boat successfully" do
+require 'rails_helper'
+feature 'user can add boats' do
+  scenario 'user creates new boat successfully' do
     visit new_boat_path
-    expect(page).to have_content "New Boat Form"
+    expect(page).to have_content 'New Boat Form'
     fill_in 'Brand', with: 'formula'
     fill_in 'Model', with: 'fastech 292'
     fill_in 'Year', with: '2009'
@@ -14,10 +14,10 @@ feature "user can add boats" do
     attach_file "Boat photo", "#{Rails.root}/spec/support/images/photo.jpg"
     click_button 'Add My Boat'
   end
-  scenario "user does not provide proper information for a boat" do
+  scenario 'user does not provide proper information for a boat' do
     visit new_boat_path
-    expect(page).to have_content "New Boat Form"
-    click_button "Add My Boat"
+    expect(page).to have_content 'New Boat Form'
+    click_button 'Add My Boat'
     expect(page).to have_content "Brand can't be blank"
     expect(page).to have_content "Model can't be blank"
     expect(page).to have_content "Year can't be blank"

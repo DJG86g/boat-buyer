@@ -1,5 +1,5 @@
 class BoatsController < ApplicationController
-    before_action :authorize_user, except: [:index, :new, :create, :show]
+  before_action :authorize_user, except: [:index, :new, :create, :show]
 
     def index
       @boats = Boat.all
@@ -13,23 +13,23 @@ class BoatsController < ApplicationController
       @boat = Boat.new(boat_params)
 
       if @boat.save
-        flash[:notice] = "Boat added successfully"
+        flash[:notice] = 'Boat added successfully'
         redirect_to @boat
       else
-        render action: "new"
+        render action: 'new'
       end
     end
 
-    private
+  private
 
     def boat_params
-      params.require(:boat).permit(:brand, :model, :year, :hours, :engine_size, :number_of_engines, :length_of_boat, :hull_style)
+      params.require(:boat).permit(:brand, :model, :year, :hours,
+        :engine_size, :number_of_engines, :length_of_boat, :hull_style)
     end
 
     def authorize_user
       if !user_signed_in?
-        raise ActionController::RoutingError.new("You are not authorized to do that!")
+        raise ActionController::RoutingError.new('You are not authorized to do that!')
       end
     end
-
 end
