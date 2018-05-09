@@ -6,5 +6,6 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :email, presence: true
   validates :date_of_birth, presence: true
-  has_many :boats
+  belongs_to :marina
+  has_many :boats, through: :marina
 end
