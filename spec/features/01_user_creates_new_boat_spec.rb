@@ -11,7 +11,7 @@ feature 'user can add boats' do
     fill_in 'Number of engines', with: '2'
     fill_in 'Length of boat', with: '29 feet'
     fill_in 'Hull style', with: 'deep v'
-    attach_file "Boat photo", "#{Rails.root}/spec/support/images/photo.jpg"
+    attach_file 'Boat photo', "#{Rails.root}/spec/support/images/photo.jpg"
     click_button 'Add My Boat'
   end
   scenario 'user does not provide proper information for a boat' do
