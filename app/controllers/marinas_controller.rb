@@ -1,0 +1,3 @@
+class MarinasController < ApplicationController
+
+end
