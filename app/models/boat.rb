@@ -7,5 +7,5 @@ class Boat < ApplicationRecord
   validates :engine_size, presence: true
   validates :length_of_boat, presence: true
   # belongs_to :marina
-  # belongs_to :users, through: :marina
+   belongs_to :user
 end
