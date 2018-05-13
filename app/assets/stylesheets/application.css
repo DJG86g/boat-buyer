@@ -61,3 +61,26 @@
   border-radius: 10px;
   margin-right: 800px;
 }
+
+.boat-tile {
+  display: inline-block;
+  width: 75%;
+  height: 5rem;
+  text-decoration: none;
+  font-family: 'LobsterRegular';
+  font-size: 16px;
+
+  text-align: center;
+  margin: 1rem;
+  line-height: 1.2rem;
+  align-items: center;
+  box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3);
+  background: #0066CC;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: 1.5s ease;
+  /* box-sizing: content-box; */
+  color: white;
+  padding-top: 10px;
+  justify-content: center;
+}
