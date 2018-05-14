@@ -1,4 +1,11 @@
-<p>
-  Modify me in `app/views/homes/index.html.erb` or change the root directive in
-  `config/routes.rb`
-</p>
+<% if user_signed_in? %>
+  <div>
+    <ul>
+      <% @boat_sell.each do |sail| %>
+      <li class="boat-tile">
+        <%= link_to "check out this boat  ",sail.first.last.value %><%= sail.values[1].value %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+<%end%>

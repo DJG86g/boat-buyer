@@ -1,0 +1,12 @@
+<div class="boat-temp">
+  <img id="boat-photo" src="<%= @boat.boat_photo.url %>" alt='boat photo'>
+  <h1 class="title-page-welcome"><%= @boat.brand %></h1>
+  <p class="title-page-info"><%="Boat model: "%><%= @boat.model %></p>
+  <p class="title-page-info"><%="Boat Year: "%><%= @boat.year %></p>
+  <p class="title-page-info"><%="Boat Hours: "%><%= @boat.hours %></p>
+  <p class="title-page-info"><%="Boat Engine Size: "%><%= @boat.engine_size %></p>
+  <p class="title-page-info"><%="Boat Owner: "%><%= @boat.user.first_name %></p>
+  <%if user_signed_in? %>
+    <%="MAKE AN OffER"%>
+  <%end%>
+</div>

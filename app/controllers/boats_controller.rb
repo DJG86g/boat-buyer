@@ -5,13 +5,17 @@ class BoatsController < ApplicationController
     @boats = Boat.all
   end
 
+  def show
+    @boat = Boat.find(params[:id])
+  end
+
   def new
     @boat = Boat.new
   end
 
   def create
     @boat = Boat.new(boat_params)
-
+    @boat.user_id = current_user.id if current_user
     if @boat.save
       flash[:notice] = 'Boat added successfully'
       redirect_to @boat

@@ -15,3 +15,72 @@
  *= require foundation_and_overrides
 
  */
+ body {
+  background: linear-gradient(#0066CC, white);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+ p {
+    font-family: 'LobsterRegular';
+    color: white;
+    font-weight: normal;
+    font-style: normal;
+ }
+
+ h1 {
+    font-family: 'LobsterRegular';
+    color: white;
+    font-weight: normal;
+    font-style: normal;
+ }
+
+.boat-temp{
+  background-color: #0066CC;
+  border-style: solid;
+  border-color: blue;
+  border-width: 2px;
+  border-radius: 10px;
+  margin-right: 950px;
+}
+
+.user-temp{
+  background-color: #0066CC;
+  border-style: solid;
+  border-color: blue;
+  border-width: 2px;
+  border-radius: 10px;
+  margin-right: 950px;
+}
+
+.form{
+  background-color: #86D7DE;
+
+  border-width: 2px;
+  border-radius: 10px;
+  margin-right: 800px;
+}
+
+.boat-tile {
+  display: inline-block;
+  width: 75%;
+  height: 5rem;
+  text-decoration: none;
+  font-family: 'LobsterRegular';
+  font-size: 16px;
+
+  text-align: center;
+  margin: 1rem;
+  line-height: 1.2rem;
+  align-items: center;
+  box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3);
+  background: #0066CC;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: 1.5s ease;
+  /* box-sizing: content-box; */
+  color: white;
+  padding-top: 10px;
+  justify-content: center;
+}
