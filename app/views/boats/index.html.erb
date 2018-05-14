@@ -1,0 +1,8 @@
+<h1><%= "All User Boats" %></h1>
+
+
+<% @boats.each do |boat| %>
+<li class="boat-tile">
+  <%= link_to "#{boat.brand}",boat_path(boat) %>
+</li>
+<% end %>

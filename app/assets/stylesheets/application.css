@@ -45,6 +45,10 @@
   margin-right: 950px;
 }
 
+ :visited {
+  color: white;
+}
+
 .user-temp{
   background-color: #0066CC;
   border-style: solid;
@@ -64,8 +68,8 @@
 
 .boat-tile {
   display: inline-block;
-  width: 75%;
-  height: 5rem;
+  width: 30%;
+  height: 3rem;
   text-decoration: none;
   font-family: 'LobsterRegular';
   font-size: 16px;
@@ -79,7 +83,7 @@
   border-radius: 0.5rem;
   text-decoration: none;
   transition: 1.5s ease;
-  /* box-sizing: content-box; */
+  box-sizing: content-box;
   color: white;
   padding-top: 10px;
   justify-content: center;
