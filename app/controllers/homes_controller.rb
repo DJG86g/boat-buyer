@@ -1,6 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
-require "pry"
+require 'pry'
 class HomesController < ApplicationController
   def index
     page = Nokogiri::HTML(open('https://boston.craigslist.org/d/boats/search/boo'))
