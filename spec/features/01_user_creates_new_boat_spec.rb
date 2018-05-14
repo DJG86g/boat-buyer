@@ -1,7 +1,7 @@
 require 'rails_helper'
 feature 'user can add boats' do
   scenario 'user creates new boat successfully' do
-    marina = Marina.create!(name: "test marina", address: "123 fake st", city: "nowhere by the sea", state: "na", zip_code: "90210", max_boat_size: 30, public_restroom: true, gas_dock: true, public_launch: true)
+    marina = Marina.create!(name: 'test marina', address: '123 fake st', city: 'nowhere by the sea', state: 'na', zip_code: '90210', max_boat_size: 30, public_restroom: true, gas_dock: true, public_launch: true)
     visit new_boat_path(marina)
     expect(page).to have_content 'New Boat Form'
     fill_in 'Brand', with: 'formula'

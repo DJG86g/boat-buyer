@@ -10,12 +10,10 @@ class HomesController < ApplicationController
     # Nokogiri::HTML(open(link))
     # show = Nokogiri::HTML(open(link))
     # show.css("img").first
-
-
-    all_boats = page.css(".result-row")
+    all_boats = page.css('.result-row')
     @boat_sell = []
     all_boats.each do |boat|
-    @boat_sell << boat.css("a").first.attributes
+      @boat_sell << boat.css('a').first.attributes
     end
   end
 end
