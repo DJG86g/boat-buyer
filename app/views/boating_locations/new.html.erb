@@ -1,0 +1,50 @@
+<% require 'carrierwave/orm/activerecord' %>
+<h1>New Boating Location Form</h1>
+<% if @boating_location.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@boating_location.errors.count, "error") %> prohibited this boating location from being saved:</h2>
+
+    <ul>
+      <% @boating_location.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class="form">
+<%= form_for([@boating_location]) do |f| %>
+
+  <div>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+  </div>
+
+  <div>
+  <%= f.label :address %><br />
+  <%= f.text_field :address %>
+  </div>
+
+  <div>
+  <%= f.label :lat_long %><br />
+  <%= f.text_field :lat_long %>
+  </div>
+
+  <div>
+  <%= f.label :public_launch %><br />
+  <%= f.check_box :public_launch %>
+  </div>
+
+  <div>
+  <%= f.label :public_restroom %><br />
+  <%= f.check_box :public_restroom %>
+  </div>
+
+  <div>
+  <%= f.label :gas_dock %><br />
+  <%= f.check_box :gas_dock %>
+  </div>
+
+  <%= f.submit "Add My Boating Location"%>
+
+<% end %>
+</div>
