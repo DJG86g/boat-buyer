@@ -45,6 +45,14 @@ h1 {
   margin-right: 950px;
 }
 
+:hover {
+  color: white;
+}
+
+:link {
+  color: white;
+}
+
 :visited {
   color: white;
 }
