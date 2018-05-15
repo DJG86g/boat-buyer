@@ -3,7 +3,7 @@
     <ul>
       <% @boat_sell.each do |sail| %>
       <li class="boat-tile">
-        <%= link_to "check out this boat  ",sail.first.last.value %><%= sail.values[1].value %>
+        <%= link_to "#{sail.children.text}",sail.first.last %>
       </li>
       <% end %>
     </ul>
