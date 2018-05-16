@@ -5,7 +5,8 @@
   <p class="title-page-info"><%="Boat Hours: "%><%= @boat.hours %></p>
   <p class="title-page-info"><%="Boat Engine Size: "%><%= @boat.engine_size %></p>
   <p class="title-page-info"><%="Boat Owner: "%><%= @boat.user.first_name %></p>
+  <%= "test" %>
   <%if user_signed_in? %>
-    <%="@boat.user.phone_number"%>
+    <%="#{@boat.user.phone_number}"%>
   <%end%>
 </div>

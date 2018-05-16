@@ -1,5 +1,5 @@
 class BoatingLocationsController < ApplicationController
-
+  before_action :authorize_user, except: [:index, :new, :create, :show]
   def index
     @boating_locations = BoatingLocation.all
   end

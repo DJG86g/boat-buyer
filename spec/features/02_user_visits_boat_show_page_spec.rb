@@ -1,5 +1,5 @@
 require 'rails_helper'
-feature 'user can add boats' do
+feature 'user can see a boat' do
   scenario 'user visits boat show page' do
       user = User.create!(username:"boatman",first_name:"sam",last_name:"daman",date_of_birth:"1988-03-02",email:"seaman@ship.com",password:"notpassword")
       boat = Boat.create!(
@@ -13,9 +13,19 @@ feature 'user can add boats' do
         length_of_boat:"33",
         hull_style:"deep vee"
       )
+      marina = Marina.create!(name:"oaksbluff",
+        address:"blah st",
+        city:"oaksbluff",
+        state:"ma",
+        zip_code:"010101",
+        max_boat_size: 30 ,
+        accomidations:"all the things",
+        public_launch: true,
+        public_restroom: true,
+        gas_dock: true
+      )
 
-    visit boat_path(boat)
-    save_and_open_page
+    visit boat_path
     expect(page).to have_content "#{boat.user.first_name}'s #{boat.brand}"
     expect(page).to have_content "#{boat.brand}"
     expect(page).to have_content "#{boat.model}"

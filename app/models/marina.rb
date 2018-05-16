@@ -9,5 +9,5 @@ class Marina < ApplicationRecord
   validates :public_restroom, presence: true
   validates :max_boat_size, presence: true
   has_many :boats
-  has_many :users
+  has_many :users, through: :boats
 end
