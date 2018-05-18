@@ -23,6 +23,8 @@ class MarinasController < ApplicationController
     end
   end
 
+  private
+  
   def marina_params
     params.require(:marina).permit(
       :name,

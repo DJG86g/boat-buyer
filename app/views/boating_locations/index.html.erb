@@ -1,1 +1,7 @@
 <h1> <%= "All Boating locations" %> </h1>
+<% @boating_locations.each do |boating_location| %>
+<li class="boat-tile">
+  <%= link_to "#{boating_location.name}",boating_location_path(boating_location) %>
+</li>
+<% end %>
+<p><%= link_to "add a new boating location", new_boating_location_path %></p>

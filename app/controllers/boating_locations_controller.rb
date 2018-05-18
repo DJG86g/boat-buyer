@@ -22,6 +22,7 @@ class BoatingLocationsController < ApplicationController
       render action: 'new'
     end
   end
+  
   private
 
   def boating_location_params

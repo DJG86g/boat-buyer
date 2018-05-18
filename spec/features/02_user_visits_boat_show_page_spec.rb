@@ -27,7 +27,7 @@ feature 'user can see a boat' do
       state:"ma",
       zip_code:"010101",
       max_boat_size: 30 ,
-      accomidations:"all the things",
+      accommodations:"all the things",
       public_launch: true,
       public_restroom: true,
       gas_dock: true
