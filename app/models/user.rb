@@ -8,4 +8,5 @@ class User < ApplicationRecord
   validates :date_of_birth, presence: true
   has_many :boats
   has_many :boating_locations
+  has_many :marinas
 end

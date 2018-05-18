@@ -1,0 +1,12 @@
+<div class="boat-temp">
+  <h1 class="title-page-welcome"><%= "#{@marina.name}" %></h1>
+  <p class="title-page-info"><%="Boat model: "%><%= @marina.address %></p>
+  <p class="title-page-info"><%="Boat Year: "%><%= @marina.city %></p>
+  <p class="title-page-info"><%="Boat Hours: "%><%= @marina.state %></p>
+
+
+
+  <%if user_signed_in? %>
+    <%="hello"%>
+  <%end%>
+</div>

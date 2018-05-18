@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_14_145020) do
+ActiveRecord::Schema.define(version: 2018_05_17_180301) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 2018_05_14_145020) do
     t.boolean "public_restroom", default: false, null: false
     t.boolean "gas_dock", default: false, null: false
     t.boolean "public_launch", default: false, null: false
+    t.bigint "boat_id"
+    t.index ["boat_id"], name: "index_marinas_on_boat_id"
   end
 
   create_table "users", force: :cascade do |t|

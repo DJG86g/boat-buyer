@@ -11,9 +11,9 @@
     </ul>
   </div>
 <% end %>
-<div class="form">
-<%= form_for([@marina]) do |f| %>
 
+<div class="form">
+<%= form_for(@marina) do |f| %>
   <div>
   <%= f.label :name %><br />
   <%= f.text_field :name %>

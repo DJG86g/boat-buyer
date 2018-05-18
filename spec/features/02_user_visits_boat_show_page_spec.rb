@@ -13,7 +13,8 @@ feature 'user can see a boat' do
         length_of_boat:"33",
         hull_style:"deep vee"
       )
-      marina = Marina.create!(name:"oaksbluff",
+      marina = Marina.create!(
+        name:"oaksbluff",
         address:"blah st",
         city:"oaksbluff",
         state:"ma",
@@ -25,7 +26,7 @@ feature 'user can see a boat' do
         gas_dock: true
       )
 
-    visit boat_path
+    visit boat_path(boat)
     expect(page).to have_content "#{boat.user.first_name}'s #{boat.brand}"
     expect(page).to have_content "#{boat.brand}"
     expect(page).to have_content "#{boat.model}"
