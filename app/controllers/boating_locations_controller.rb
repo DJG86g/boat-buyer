@@ -22,14 +22,16 @@ class BoatingLocationsController < ApplicationController
       render action: 'new'
     end
   end
-
-
-
   private
 
   def boating_location_params
-    params.require(:boating_location).permit(:name, :address, :lat_long, :gas_dock,
-      :public_launch, :public_restroom)
+    params.require(:boating_location).permit(
+      :name,
+      :address,
+      :lat_long,
+      :gas_dock,
+      :public_launch,
+      :public_restroom
+    )
   end
-
 end

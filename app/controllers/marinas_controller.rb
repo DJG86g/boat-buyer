@@ -24,7 +24,17 @@ class MarinasController < ApplicationController
   end
 
   def marina_params
-    params.require(:marina).permit(:name, :address, :city, :state, :zip_code, :max_boat_size, :public_restroom, :gas_dock, :public_launch, :marina_id)
+    params.require(:marina).permit(
+      :name,
+      :address,
+      :city,
+      :state,
+      :zip_code,
+      :max_boat_size,
+      :public_restroom,
+      :gas_dock,
+      :public_launch,
+      :marina_id
+    )
   end
-
 end
