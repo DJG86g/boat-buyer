@@ -1,0 +1,70 @@
+<% require 'carrierwave/orm/activerecord' %>
+<h1>New Marina</h1>
+<% if @marina.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@marina.errors.count, "error") %> prohibited this marina from being saved:</h2>
+
+    <ul>
+      <% @marina.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="form">
+<%= form_for(@marina) do |f| %>
+  <div>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+  </div>
+
+  <div>
+  <%= f.label :address %><br />
+  <%= f.text_field :address %>
+  </div>
+
+  <div>
+  <%= f.label :city %><br />
+  <%= f.text_field :city %>
+  </div>
+
+  <div>
+  <%= f.label :state %><br />
+  <%= f.text_field :state %>
+  </div>
+
+  <div>
+  <%= f.label :zip_code %><br />
+  <%= f.text_field :zip_code %>
+  </div>
+
+  <div>
+  <%= f.label :max_boat_size %><br />
+  <%= f.text_field :max_boat_size %>
+  </div>
+
+  <div>
+  <%= f.label :accommodations %><br />
+  <%= f.text_field :accommodations %>
+  </div>
+
+  <div>
+  <%= f.label :public_launch %><br />
+  <%= f.check_box :public_launch %>
+  </div>
+
+  <div>
+  <%= f.label :public_restroom %><br />
+  <%= f.check_box :public_restroom %>
+  </div>
+
+  <div>
+  <%= f.label :gas_dock %><br />
+  <%= f.check_box :gas_dock %>
+  </div>
+
+  <%= f.submit "Add Marina"%>
+
+<% end %>
+</div>

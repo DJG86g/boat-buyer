@@ -1,0 +1,7 @@
+<h1> <%= "All Marinas" %> </h1>
+<% @marinas.each do |marina| %>
+<li class="boat-tile">
+  <%= link_to "#{marina.name}",marina_path(marina) %>
+</li>
+<% end %>
+<p><%= link_to "add a new marina", new_marina_path %></p>

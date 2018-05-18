@@ -11,7 +11,8 @@ feature 'user can add boats' do
       gas_dock: true,
       public_launch: true
     )
-    visit new_boat_path(marina)
+    visit new_boat_path
+    expect(page).to have_content "BoatBuyer"
     expect(page).to have_content 'New Boat Form'
     fill_in 'Brand', with: 'formula'
     fill_in 'Model', with: 'fastech 292'

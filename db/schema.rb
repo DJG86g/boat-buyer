@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_10_190004) do
+ActiveRecord::Schema.define(version: 2018_05_18_144549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boating_locations", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "address", null: false
+    t.point "lat_long"
+    t.boolean "gas_dock", default: false, null: false
+    t.boolean "public_restroom", default: false, null: false
+    t.boolean "public_launch", default: false, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_boating_locations_on_user_id"
+  end
 
   create_table "boats", force: :cascade do |t|
     t.string "brand", null: false
@@ -36,10 +47,12 @@ ActiveRecord::Schema.define(version: 2018_05_10_190004) do
     t.string "state", null: false
     t.string "zip_code", null: false
     t.integer "max_boat_size", null: false
-    t.text "accomidations"
+    t.text "accommodations"
     t.boolean "public_restroom", default: false, null: false
     t.boolean "gas_dock", default: false, null: false
     t.boolean "public_launch", default: false, null: false
+    t.bigint "boat_id"
+    t.index ["boat_id"], name: "index_marinas_on_boat_id"
   end
 
   create_table "users", force: :cascade do |t|

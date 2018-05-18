@@ -1,5 +1,5 @@
 class BoatsController < ApplicationController
-  before_action :authorize_user, except: [:index, :new, :create, :show]
+  # before_action :authorize_user, except: [:index, :new, :create, :show]
 
   def index
     @boats = Boat.all
@@ -16,9 +16,10 @@ class BoatsController < ApplicationController
   def create
     @boat = Boat.new(boat_params)
     @boat.user_id = current_user.id if current_user
+    # @boat.marina = @marina
     if @boat.save
       flash[:notice] = 'Boat added successfully'
-      redirect_to @boat
+      redirect_to boat_path(@boat)
     else
       render action: 'new'
     end

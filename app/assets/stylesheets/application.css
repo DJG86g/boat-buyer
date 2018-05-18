@@ -15,28 +15,28 @@
  *= require foundation_and_overrides
 
  */
- body {
+body {
   background: linear-gradient(#0066CC, white);
   height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
- p {
+p {
     font-family: 'LobsterRegular';
     color: white;
     font-weight: normal;
     font-style: normal;
- }
+}
 
- h1 {
+h1 {
     font-family: 'LobsterRegular';
     color: white;
     font-weight: normal;
     font-style: normal;
- }
+}
 
-.boat-temp{
+.boat-temp {
   background-color: #0066CC;
   border-style: solid;
   border-color: blue;
@@ -45,7 +45,19 @@
   margin-right: 950px;
 }
 
-.user-temp{
+:hover {
+  color: white;
+}
+
+:link {
+  color: white;
+}
+
+:visited {
+  color: white;
+}
+
+.user-temp {
   background-color: #0066CC;
   border-style: solid;
   border-color: blue;
@@ -56,7 +68,8 @@
 
 .form{
   background-color: #86D7DE;
-
+  width: 33%;
+  height: 60rem;
   border-width: 2px;
   border-radius: 10px;
   margin-right: 800px;
@@ -64,12 +77,11 @@
 
 .boat-tile {
   display: inline-block;
-  width: 75%;
-  height: 5rem;
+  width: 30%;
+  height: 3rem;
   text-decoration: none;
   font-family: 'LobsterRegular';
   font-size: 16px;
-
   text-align: center;
   margin: 1rem;
   line-height: 1.2rem;
@@ -79,7 +91,7 @@
   border-radius: 0.5rem;
   text-decoration: none;
   transition: 1.5s ease;
-  /* box-sizing: content-box; */
+  box-sizing: content-box;
   color: white;
   padding-top: 10px;
   justify-content: center;

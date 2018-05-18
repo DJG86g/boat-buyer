@@ -13,7 +13,7 @@ class HomesController < ApplicationController
     all_boats = page.css('.result-row')
     @boat_sell = []
     all_boats.each do |boat|
-      @boat_sell << boat.css('a').first.attributes
+      @boat_sell << boat.css('.result-info').first.css('a').first
     end
   end
 end
