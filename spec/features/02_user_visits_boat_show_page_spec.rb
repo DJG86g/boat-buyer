@@ -22,6 +22,7 @@ feature 'user can see a boat' do
     )
     marina = Marina.create!(
       name:"oaksbluff",
+      phone_number:"781-321-5476",
       address:"blah st",
       city:"oaksbluff",
       state:"ma",
@@ -32,7 +33,7 @@ feature 'user can see a boat' do
       public_restroom: true,
       gas_dock: true
     )
-    
+
 
     visit boat_path(boat)
       expect(page).to have_content "BoatBuyer"

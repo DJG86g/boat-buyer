@@ -3,6 +3,7 @@ feature 'user can see a boat' do
   scenario 'user visits boat show page' do
     marina = Marina.create!(
       name:"oaksbluff",
+      phone_number: "781-321-5476",
       address:"blah st",
       city:"oaksbluff",
       state:"ma",
@@ -16,6 +17,7 @@ feature 'user can see a boat' do
 
     visit marina_path(marina)
       expect(page).to have_content "BoatBuyer"
+      expect(page).to have_content "phone number :"
       expect(page).to have_content "address :"
       expect(page).to have_content "city :"
       expect(page).to have_content "state :"
