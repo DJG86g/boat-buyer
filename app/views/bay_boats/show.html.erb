@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+  <div>
+    <ul>
+      <% @bay_list.each do |boat| %>
+      <li class="boat-tile">
+        <%= image_tag("#{boat.css(".s-item__image-img").first.values[2]}", id: "bayboat") %></br>
+        <%= "#{boat.css(".s-item__price").first.children.text}" %></br>
+        <%= link_to "#{boat.css(".s-item__image-img").first.values[1]}",boat.css("a").first.first.last %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+<%end%>

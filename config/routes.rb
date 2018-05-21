@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   #     resources :boats
   #   end
   # end
+  get '/bay_boats/' =>'bay_boats#show', :as => :bay_boats
 end
-
 # make these not nested

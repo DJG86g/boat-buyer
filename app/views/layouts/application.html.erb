@@ -22,6 +22,7 @@
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
+        <li><%= link_to 'boats from the bay', bay_boats_path %></li>
         <li><%= link_to 'all users boats', boats_path %></li>
         <li><%= link_to 'all marinas', marinas_path %></li>
         <li><%= link_to 'all boating locations', boating_locations_path %></li>
