@@ -16,7 +16,6 @@ feature 'user can see a boat' do
 
     visit marina_path(marina)
       expect(page).to have_content "BoatBuyer"
-
       expect(page).to have_content "address :"
       expect(page).to have_content "city :"
       expect(page).to have_content "state :"
@@ -26,8 +25,6 @@ feature 'user can see a boat' do
       expect(page).to have_content "public launch :"
       expect(page).to have_content "public restroom :"
       expect(page).to have_content "gas dock :"
-
-
       expect(page).to have_content "#{marina.name}"
       expect(page).to have_content "#{marina.address}"
       expect(page).to have_content "#{marina.city}"
