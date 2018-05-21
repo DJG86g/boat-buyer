@@ -1,4 +1,4 @@
-# this will pull all boats from the bay 
+# this will pull all boats from the bay
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
