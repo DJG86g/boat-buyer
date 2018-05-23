@@ -4,7 +4,7 @@ require 'open-uri'
 require 'pry'
 class BayBoatsController < ApplicationController
   def show
-    page = Nokogiri::HTML(open('https://www.ebay.com/sch/i.html?_from=R40&_nkw=boats&_sacat=0&_ipg=200'))
+    page = Nokogiri::HTML(open('https://www.ebay.com/sch/i.html?_from=R40&_nkw=boats&_sacat=0&LH_BIN=1&_sop=10'))
     all_boats = page.css('.s-item')
     @bay_list = []
     all_boats.each do |boat|
@@ -12,3 +12,7 @@ class BayBoatsController < ApplicationController
     end
   end
 end
+
+
+#  https://www.ebay.com/sch/i.html?_from=R40&_nkw=boats&_sacat=0&_ipg=200
+# https://www.ebay.com/sch/i.html?_from=R40&_nkw=boats&_sacat=0&LH_BIN=1&_sop=10
