@@ -8,10 +8,10 @@ feature 'user can see a boat' do
       city:'oaksbluff',
       state:'ma',
       zip_code:'010101',
-      max_boat_size: 30 ,
+      max_boat_size: 30,
       accommodations:'all the things',
       public_launch: true,
-      public_restroom: true, 
+      public_restroom: true,
       gas_dock: true
     )
 
@@ -28,6 +28,7 @@ feature 'user can see a boat' do
     expect(page).to have_content 'public restroom :'
     expect(page).to have_content 'gas dock :'
     expect(page).to have_content "#{marina.name}"
+    expect(page).to have_content "#{marina.phone_number}"
     expect(page).to have_content "#{marina.address}"
     expect(page).to have_content "#{marina.city}"
     expect(page).to have_content "#{marina.state}"
@@ -37,5 +38,6 @@ feature 'user can see a boat' do
     expect(page).to have_content "#{marina.public_launch}"
     expect(page).to have_content "#{marina.public_restroom}"
     expect(page).to have_content "#{marina.gas_dock}"
+    expect(page).to have_link  'back to all marinas'
   end
 end

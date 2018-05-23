@@ -10,7 +10,7 @@
   <p class="title-page-info"><%="public launch : "%><%= @marina.public_launch %></p>
   <p class="title-page-info"><%="public restroom : "%><%= @marina.public_restroom %></p>
   <p class="title-page-info"><%="gas dock : "%><%= @marina.gas_dock %></p>
-
+  <li><%= link_to 'back to all marinas', marinas_path %></li>
 
 
   <%if user_signed_in? %>
