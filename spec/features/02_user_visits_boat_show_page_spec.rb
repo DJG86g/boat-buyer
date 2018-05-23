@@ -43,5 +43,6 @@ feature 'user can see a boat' do
       expect(page).to have_content "#{boat.engine_size}"
       expect(page).to have_content "#{boat.number_of_engines}"
       expect(page).to have_content "#{boat.length_of_boat}"
+      expect(page).to have_link 'back to all user boats'
   end
 end

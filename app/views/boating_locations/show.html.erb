@@ -1,7 +1,7 @@
 <div class="boat-temp">
   <h1 class="title-page-welcome"><%= "#{@boating_location.name}" %></h1>
   <p class="title-page-info"><%="address: "%><%= @boating_location.address %></p>
-  <p class="title-page-info"><%="latitude and longitude: "%><%= @boating_location.lat_long.values %></p>
+  <p class="title-page-info"><%="latitude and longitude: "%><%= @boating_location.lat_long.nil? ? "N/A" : @boating_location.lat_long.values %></p>
   <p class="title-page-info"><%="gas dock: "%><%= @boating_location.gas_dock %></p>
   <p class="title-page-info"><%="public restroom: "%><%= @boating_location.public_restroom %></p>
   <p class="title-page-info"><%="public launch: "%><%= @boating_location.public_launch %></p>
