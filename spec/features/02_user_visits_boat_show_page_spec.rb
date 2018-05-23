@@ -33,8 +33,6 @@ feature 'user can see a boat' do
       public_restroom: true,
       gas_dock: true
     )
-
-
     visit boat_path(boat)
       expect(page).to have_content 'BoatBuyer'
       expect(page).to have_content "#{boat.user.first_name}'s #{boat.brand}"
