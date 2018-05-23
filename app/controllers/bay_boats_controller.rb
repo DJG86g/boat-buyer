@@ -12,7 +12,4 @@ class BayBoatsController < ApplicationController
     end
   end
 end
-
-
-#  https://www.ebay.com/sch/i.html?_from=R40&_nkw=boats&_sacat=0&_ipg=200
-# https://www.ebay.com/sch/i.html?_from=R40&_nkw=boats&_sacat=0&LH_BIN=1&_sop=10
+  
