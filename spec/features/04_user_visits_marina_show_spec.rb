@@ -11,7 +11,7 @@ feature 'user can see a boat' do
       max_boat_size: 30 ,
       accommodations:'all the things',
       public_launch: true,
-      public_restroom: true,
+      public_restroom: true, 
       gas_dock: true
     )
 
