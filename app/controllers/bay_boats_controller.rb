@@ -12,4 +12,3 @@ class BayBoatsController < ApplicationController
     end
   end
 end
-  

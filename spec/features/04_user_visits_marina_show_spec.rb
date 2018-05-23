@@ -38,6 +38,6 @@ feature 'user can see a boat' do
     expect(page).to have_content "#{marina.public_launch}"
     expect(page).to have_content "#{marina.public_restroom}"
     expect(page).to have_content "#{marina.gas_dock}"
-    expect(page).to have_link  'back to all marinas'
+    expect(page).to have_link 'back to all marinas'
   end
 end

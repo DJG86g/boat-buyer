@@ -29,5 +29,4 @@ feature 'user can add boating location' do
     expect(page).to have_content "Public restroom can't be blank"
     expect(page).to have_content "User must exist"
   end
-
 end
