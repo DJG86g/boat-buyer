@@ -10,7 +10,6 @@ class HomesController < ApplicationController
     # Nokogiri::HTML(open(link))
     # show = Nokogiri::HTML(open(link))
     # show.css("img").first
-    binding.pry
     all_boats = page.css('.result-row')
     @boat_sell = []
     all_boats.each do |boat|
