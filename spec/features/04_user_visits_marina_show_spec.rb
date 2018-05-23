@@ -27,15 +27,15 @@ feature 'user can see a boat' do
     expect(page).to have_content 'public launch :'
     expect(page).to have_content 'public restroom :'
     expect(page).to have_content 'gas dock :'
-    expect(page).to have_content '#{marina.name}'
-    expect(page).to have_content '#{marina.address}'
-    expect(page).to have_content '#{marina.city}'
-    expect(page).to have_content '#{marina.state}'
-    expect(page).to have_content '#{marina.zip_code}'
-    expect(page).to have_content '#{marina.max_boat_size}'
-    expect(page).to have_content '#{marina.accommodations}'
-    expect(page).to have_content '#{marina.public_launch}'
-    expect(page).to have_content '#{marina.public_restroom}'
-    expect(page).to have_content '#{marina.gas_dock}'
+    expect(page).to have_content "#{marina.name}"
+    expect(page).to have_content "#{marina.address}"
+    expect(page).to have_content "#{marina.city}"
+    expect(page).to have_content "#{marina.state}"
+    expect(page).to have_content "#{marina.zip_code}"
+    expect(page).to have_content "#{marina.max_boat_size}"
+    expect(page).to have_content "#{marina.accommodations}"
+    expect(page).to have_content "#{marina.public_launch}"
+    expect(page).to have_content "#{marina.public_restroom}"
+    expect(page).to have_content "#{marina.gas_dock}"
   end
 end
