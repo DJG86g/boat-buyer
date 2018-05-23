@@ -4,7 +4,7 @@
 [![Code Climate](https://codeclimate.com/github/DJG86g/boat-buyer/badges/gpa.svg)](https://codeclimate.com/github/DJG86g/boat-buyer)
 [![Coverage Status](https://coveralls.io/repos/github/DJG86g/boat-buyer/badge.svg?branch=master)](https://coveralls.io/github/DJG86g/boat-buyer?branch=master)
 
-Boat-Buyer 
+# Boat-Buyer
 
 * Ruby version - ``` 2.3.3 ```
 
@@ -22,4 +22,4 @@ Boat-Buyer
 
 the "marina" show page will show a list of boats which you can look at and message the owner. it will utilize actioncable for messaging.
 
-the goal of this open source project is to help new boaters find fun location to travel to. it will utilize the google maps api to select points on a map with  latitude and longitude. it will also use a weather api to give weather forcast for the area you start out and the area you will be traveling to.
+the goal of this open source project is to help new boaters find fun locations to travel to. It will utilize the google maps api to select points on a map with  latitude and longitude. It will also use a weather api to give weather forcast for the area you start out and the area you will be traveling to.

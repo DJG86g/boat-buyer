@@ -1,5 +1,6 @@
 <div class="boat-temp">
   <h1 class="title-page-welcome"><%= "#{@marina.name}" %></h1>
+  <p class="title-page-info"><%="phone number : "%><%= @marina.phone_number %></p>
   <p class="title-page-info"><%="address : "%><%= @marina.address %></p>
   <p class="title-page-info"><%="city : "%><%= @marina.city %></p>
   <p class="title-page-info"><%="state : "%><%= @marina.state %></p>
@@ -9,7 +10,7 @@
   <p class="title-page-info"><%="public launch : "%><%= @marina.public_launch %></p>
   <p class="title-page-info"><%="public restroom : "%><%= @marina.public_restroom %></p>
   <p class="title-page-info"><%="gas dock : "%><%= @marina.gas_dock %></p>
-
+  <li><%= link_to 'back to all marinas', marinas_path %></li>
 
 
   <%if user_signed_in? %>

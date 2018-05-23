@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_18_144549) do
+ActiveRecord::Schema.define(version: 2018_05_21_132822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2018_05_18_144549) do
     t.boolean "gas_dock", default: false, null: false
     t.boolean "public_launch", default: false, null: false
     t.bigint "boat_id"
+    t.string "phone_number", default: "555-555-5555", null: false
     t.index ["boat_id"], name: "index_marinas_on_boat_id"
   end
 
