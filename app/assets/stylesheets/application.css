@@ -96,3 +96,12 @@ h1 {
   padding-top: 10px;
   justify-content: center;
 }
+
+.title-page-info{
+  background-color: #0066CC;
+  border-style: solid;
+  border-color: blue;
+  border-width: 2px;
+  border-radius: 10px;
+  margin-right: 950px;
+}

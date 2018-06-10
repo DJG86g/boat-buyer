@@ -1,12 +1,13 @@
 <div class="boat-temp">
   <h1 class="title-page-welcome"><%= "#{@boat.user.first_name}'s #{@boat.brand}" %></h1>
-  <p class="title-page-info"><%="Boat model: "%><%= @boat.model %></p>
-  <p class="title-page-info"><%="Boat Year: "%><%= @boat.year %></p>
-  <p class="title-page-info"><%="Boat Hours: "%><%= @boat.hours %></p>
-  <p class="title-page-info"><%="Boat Engine Size: "%><%= @boat.engine_size %></p>
-  <p class="title-page-info"><%="Boat Owner: "%><%= @boat.user.first_name %></p>
+  <h2><img id="boat-photo" src="<%= @boat.boat_photo.url %>" alt='boat photo'></h2>
+  <p><%="Boat model: "%><%= @boat.model %></p>
+  <p><%="Boat Year: "%><%= @boat.year %></p>
+  <p><%="Boat Hours: "%><%= @boat.hours %></p>
+  <p><%="Boat Engine Size: "%><%= @boat.engine_size %></p>
+  <p><%="Boat Owner: "%><%= @boat.user.first_name %></p>
   <%if user_signed_in? %>
-    <%="#{@boat.user.phone_number}"%>
+    <p><%="#{@boat.user.phone_number}"%></p>
   <%end%>
 </div>
   <p class="title-page-info"><%= link_to 'back to all user boats', boats_path %></p>

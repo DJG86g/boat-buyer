@@ -3,7 +3,8 @@
 
 <% @boats.each do |boat| %>
 <li class="boat-tile">
-  <%= link_to "#{boat.brand}",boat_path(boat) %>
+  <%= link_to "#{boat.user.first_name}'s #{boat.brand}",boat_path(boat) %>
+  <h2><img id="boat-photo" src="<%= boat.boat_photo.url %>" alt='boat photo'></h2>
 </li>
 <% end %>
 <p><%= link_to "add a new boat", new_boat_path %></p>
