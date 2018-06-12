@@ -29,7 +29,7 @@ class BoatsController < ApplicationController
 
   def boat_params
     params.require(:boat).permit(:brand, :model, :year, :hours,
-      :engine_size, :number_of_engines, :length_of_boat, :hull_style)
+      :engine_size, :number_of_engines, :length_of_boat, :hull_style, :boat_photo)
   end
 
   def authorize_user
