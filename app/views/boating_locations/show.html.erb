@@ -6,7 +6,7 @@
   <p><%="public restroom: "%><%= @boating_location.public_restroom %></p>
   <p><%="public launch: "%><%= @boating_location.public_launch %></p>
   <%if user_signed_in? %>
-    <p class="title-page-info"><%="hello captain #{current_user.first_name} !!"%></p>
+    <p><%="hello captain #{current_user.first_name} !!"%></p>
   <%end%>
-  <p class="title-page-info"><%= link_to 'back to boating locations', boating_locations_path %></p>
+  <p><%= link_to 'back to boating locations', boating_locations_path %></p>
 </div>
